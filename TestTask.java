@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Created by Елизавета on 23.09.2018.
- */
 public class TestTask {
     static int minNumAction(int line[],int k)
     {
