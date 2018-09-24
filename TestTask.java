@@ -30,11 +30,13 @@ public class TestTask {
             //определение минимального количества команд, позволяющих пройти найденные расстояния
             if(line[d_next]==0) line[d_next]=minNumAction(line,d_next);
             if(line[d_prev]==0) line[d_prev]=minNumAction(line,d_prev);
-            if(line[d_prev]+2<line[d_next]+1){
-                count=count+line[d_prev]+2;
+            int count_prev=count-1+line[d_prev]+2;
+            int count_next=count+line[d_next]+1;
+            if(count_prev<count_next){
+                count=count_prev;
             }
             else{
-                count=count+line[d_next]+1;
+                count=count_next;
             }
             line[k]=count;
         }
